@@ -37,7 +37,7 @@ cd <project_directory>
 3. Run the following command to start the development server:
 
 ```bash
-    make dev
+make dev
 ```
 
 4. Open your browser and navigate to http://localhost:5432/ to play with the implemented functionality.
