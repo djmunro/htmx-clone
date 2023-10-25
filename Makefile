@@ -1,18 +1,14 @@
-# Build the Docker image
 build:
 	docker-compose build
 
-# Run the Docker container
-run:
+start:
 	docker-compose up
 
-# Stop the Docker container
 stop:
 	docker-compose down
 
-# Remove the Docker image
 clean:
 	docker rmi -f flask_web
 
-# Default target, to run the container
-all: build run
+# Default target, to start the container
+dev: build start

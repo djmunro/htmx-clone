@@ -7,11 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch(url)
         .then(response => response.text())
         .then(html => {
-          const targetAction = target.getAttribute('hx-target')
+          const hxTarget = target.getAttribute('hx-target')
+          const hxSwap = target.getAttribute('hx-swap')
 
-          const element = document.querySelector(targetAction)
-          if (element) {
-            element.innerHTML = html
+          if (hxTarget) {
+            const element = document.querySelector(hxTarget)
+            if (element) {
+              element.innerHTML = html
+            }
+          }
+          else if (hxSwap) {
+            target[hxSwap] = html
           }
         })
     }

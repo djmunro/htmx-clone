@@ -9,12 +9,20 @@
     />
   </head>
   <body>
-    <button
-      hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode"
-      hx-target="#output"
-    >
-      Click for a joke!
-    </button>
-    <div id="output" />
+    <h2>Examples</h2>
+    <div class=".example">
+      <pre>hx-target</pre>
+      <button
+        hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode"
+        hx-target="#output"
+      >
+        Click for a joke!
+      </button>
+      <div id="output" />
+    </div>
+    <div class="example">
+      <pre>hx-swap</pre>
+      <button hx-get="/wisdom" hx-swap="outerHTML">Click for wisdom!</button>
+    </div>
   </body>
 </html>
